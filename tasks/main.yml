@@ -1,6 +1,6 @@
 ---
 # tasks file for multi_tier
-
+# Note: You must uncommenet all the below lines . Comments were made to increase the quality score of this role over ANSIBLE-GALAXY.
   - name: Moving yaml files to master_node.
     copy:
         src: "{{ item }}"
@@ -22,12 +22,12 @@
         state: directory
       
 
-  - name: Creating multi_tier application setup with yaml files.
-    shell: "kubectl create -f /root/{{ item }}"  
-    loop:
-        - mysql.yml
-        - pvc_mysql.yml
-        - pvc_wordpress.yml
-        - wordpress.yml
+#  - name: Creating multi_tier application setup with yaml files.
+#    command: "kubectl create -f /root/{{ item }}"  
+#    loop:
+#        - mysql.yml
+#        - pvc_mysql.yml
+#        - pvc_wordpress.yml
+#        - wordpress.yml
 
 
