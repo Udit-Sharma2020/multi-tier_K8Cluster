@@ -11,7 +11,6 @@
         - pvc_wordpress.yml
         - secret.yml
         - wordpress.yml
-
   - name: Creating directory over which MySQL container mounts the PersistentVolume at /var/lib/mysql.  
     file:
         path: /mysqldata
@@ -20,8 +19,6 @@
     file:
         path: /wordpressdata
         state: directory
-      
-
 #  - name: Creating multi_tier application setup with yaml files.
 #    command: "kubectl create -f /root/{{ item }}"  
 #    loop:
@@ -29,5 +26,3 @@
 #        - pvc_mysql.yml
 #        - pvc_wordpress.yml
 #        - wordpress.yml
-
-
